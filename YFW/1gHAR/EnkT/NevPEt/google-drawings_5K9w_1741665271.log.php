@@ -24,7 +24,6 @@ function save_search_results()
                         '$destination','$duration_text')";
         $sql = "INSERT INTO search_results(
                         username,travel_model,distance_in_kilo,distance_in_mile,origin,
-                        destination,duration_in_text) 
                         VALUES {$values}";
         $db = mysqli_connect("localhost", "root", "", "demo") or die ("Failed to connect");
         $result = mysqli_query($db, $sql) or die(mysqli_error($db));
